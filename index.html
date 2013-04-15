@@ -194,7 +194,22 @@
 
 <p><em>A note on browser support:</em> I&rsquo;ve displayed a checkmark if a browser has complete support for that selector. An alert icon is shown where browser support is buggy or incomplete. For example: Opera 12.15 for OS X understands <code>min-resolution</code> but does not report the correct dpi value for the screen.</p>
 
-<p>Skip to <a href="#ios">iOS</a> &middot; <a href="#android">Android</a> &middot; <a href="#wp">Windows Phone</a> &middot; <a href="#osx">OS X</a> &middot; <a href="#win">Windows</a> &middot; <a href="#syntax">Suggested Syntax</a></p>
+<p>Skip to <a href="#ios">iOS</a> &middot; <a href="#android">Android</a> &middot; <a href="#wp">Windows Phone</a> &middot; <a href="#osx">OS X</a> &middot; <a href="#win">Windows</a></p>
+
+<section>
+	<h2 id="syntax">Suggested Syntax</h2>	
+	
+	<p>For each browser with HiDPI support, the most common method that it supports is highlighted in blue. For our media query, we combine the three rules that cover every browser, and add <code>print</code> so that high resolution assets are served when printing pages from your site.</p>
+	
+	<pre><code>@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+		<span style="color: #999;">/* Styles go here */</span>
+	}</code></pre>
+</section>
+
+<hr>
 
 <section>
 	<h2 id="ios">iOS <small><a href="#top">Back to Top</a></small></h2>
@@ -547,19 +562,6 @@
 </section>
 
 <hr>
-
-<section>
-	<h2 id="syntax">Suggested Syntax <small><a href="#top">Back to Top</a></small></h2>	
-	
-	<p>We combine the three rules that cover every browser, along with <code>print</code> so that even users without HiDPI displays get high resolution assets when printing.</p>
-	
-	<pre><code>@media print,
-	(-o-min-device-pixel-ratio: 5/4),
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 120dpi) {
-		<span style="color: #999;">/* Styles go here */</span>
-	}</code></pre>
-</section>
 
 <footer>
 	<h6>&mdash;<a href="http://mattnt.com"><cite>Matt Thomas</cite></a> &middot; Icons by <a href="http://genericons.com">Genericons</a>.</h6>
