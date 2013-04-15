@@ -2,53 +2,17 @@
 <head>
 	<title>HiDPI Test</title>
 	<meta name="viewport" content="initial-scale=1.0,width=device-width">
-	<style type="text/css">
-
-		@font-face {
-			font-family: 'Genericons';
-			src: url('font/genericons-regular-webfont.eot');
-			src: url('font/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
-				url('font/genericons-regular-webfont.woff') format('woff'),
-				url('font/genericons-regular-webfont.ttf') format('truetype'),
-				url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
-		
-		p:before {
-			display: inline-block;
-			width: 28px;
-			height: 20px;
-			-webkit-font-smoothing: antialiased;
-			font-size: 28px;
-			line-height: 26px;
-			font-family: 'Genericons';
-			text-decoration: inherit;
-			font-weight: normal;
-			font-style: normal;
-			vertical-align: top;
-			margin: 0 2px 0 -29px;
-		}
-		
-		/**
-		 * IE7 and IE6 hacks
-		 */
-		
-		p:before {
-			*overflow: auto;
-			*zoom: 1;
-			*display: inline;
-		}
-			
+	<style type="text/css">			
 		body * {
 			font-family: "AvenirNext-Regular", "Avenir Next Regular", "Avenir Next", "Helvetica Neue", sans-serif;
-			color: #666;
+			color: #999;
 		}
 		h1, h2 {
 			font-family: "AvenirNext-Medium", "Avenir Next Medium", "Avenir Next", "Helvetica Neue", sans-serif;
 			font-weight: 600;
 			margin: 5% auto 0;
 			width: 85%;
+			color: #000;
 		}
 		a {
 			color: #2ea2cc;
@@ -69,46 +33,31 @@
 		@media 
 		  (min-resolution: 288dpi) { /* 1x ratio = 96dpi; 96dpi * 3 = 288dpi */
 			p.dpi288, p.dpi288 code {
-				color: #2ea2cc;
-			}
-			p.dpi288:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 3dppx) {
 			p.dppx288, p.dppx288 code {
-				color: #2ea2cc;
-			}
-			p.dppx288:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 3) {
 			p.webkit288, p.webkit288 code {
-				color: #2ea2cc;
-			}
-			p.webkit288:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 3) {
 			p.moz288, p.moz288 code {
-				color: #2ea2cc;
-			}
-			p.moz288:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 3/1) {
 			p.opera288, p.opera288 code {
-				color: #2ea2cc;
-			}
-			p.opera288:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		
@@ -118,46 +67,31 @@
 		@media 
 		  (min-resolution: 240dpi) { /* 1x ratio = 96dpi; 96dpi * 2.5 = 240dpi */
 			p.dpi240, p.dpi240 code {
-				color: #2ea2cc;
-			}
-			p.dpi240:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 2.5dppx) {
 			p.dppx240, p.dppx240 code {
-				color: #2ea2cc;
-			}
-			p.dppx240:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 2.5) {
 			p.webkit240, p.webkit240 code {
-				color: #2ea2cc;
-			}
-			p.webkit240:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 2.5) {
 			p.moz240, p.moz240 code {
-				color: #2ea2cc;
-			}
-			p.moz240:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 5/2) {
 			p.opera240, p.opera240 code {
-				color: #2ea2cc;
-			}
-			p.opera240:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		
@@ -168,46 +102,31 @@
 		@media 
 		  (min-resolution: 216dpi) { /* 1x ratio = 96dpi; 96dpi * 2.25 = 216dpi */
 			p.dpi216, p.dpi216 code {
-				color: #2ea2cc;
-			}
-			p.dpi216:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 2.25dppx) {
 			p.dppx216, p.dppx216 code {
-				color: #2ea2cc;
-			}
-			p.dppx216:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 2.25) {
 			p.webkit216, p.webkit216 code {
-				color: #2ea2cc;
-			}
-			p.webkit216:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 2.25) {
 			p.moz216, p.moz216 code {
-				color: #2ea2cc;
-			}
-			p.moz216:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 9/4) {
 			p.opera216, p.opera216 code {
-				color: #2ea2cc;
-			}
-			p.opera216:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		
@@ -218,46 +137,31 @@
 		@media 
 		  (min-resolution: 192dpi) { /* 1x ratio = 96dpi; 96dpi * 2 = 192dpi */
 			p.dpi192, p.dpi192 code {
-				color: #2ea2cc;
-			}
-			p.dpi192:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 2dppx) {
 			p.dppx192, p.dppx192 code {
-				color: #2ea2cc;
-			}
-			p.dppx192:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 2) {
 			p.webkit192, p.webkit192 code {
-				color: #2ea2cc;
-			}
-			p.webkit192:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 2) {
 			p.moz192, p.moz192 code {
-				color: #2ea2cc;
-			}
-			p.moz192:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 2/1) {
 			p.opera192, p.opera192 code {
-				color: #2ea2cc;
-			}
-			p.opera192:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		
@@ -267,46 +171,31 @@
 		@media 
 		  (min-resolution: 120dpi) { /* 1x ratio = 96dpi; 96dpi * 1.25 = 120dpi */
 			p.dpi125, p.dpi125 code {
-				color: #2ea2cc;
-			}
-			p.dpi125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 1.25dppx) {
 			p.dppx125, p.dppx125 code {
-				color: #2ea2cc;
-			}
-			p.dppx125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 1.25) {
 			p.webkit125, p.webkit125 code {
-				color: #2ea2cc;
-			}
-			p.webkit125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 1.25) {
 			p.moz125, p.moz125 code {
-				color: #2ea2cc;
-			}
-			p.moz125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 5/4) {
 			p.opera125, p.opera125 code {
-				color: #2ea2cc;
-			}
-			p.opera125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		
@@ -316,46 +205,31 @@
 		@media 
 		  (min-resolution: 168dpi) { /* 1x ratio = 96dpi; 96dpi * 1.5 = 144dpi */
 			p.dpi168, p.dpi168 code {
-				color: #2ea2cc;
-			}
-			p.dpi168:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 1.75dppx) {
 			p.dppx168, p.dppx168 code {
-				color: #2ea2cc;
-			}
-			p.dppx168:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 1.75) {
 			p.webkit168, p.webkit168 code {
-				color: #2ea2cc;
-			}
-			p.webkit168:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 1.75) {
 			p.moz168, p.moz168 code {
-				color: #2ea2cc;
-			}
-			p.moz168:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 7/4) {
 			p.opera168, p.opera168 code {
-				color: #2ea2cc;
-			}
-			p.opera168:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 
@@ -366,46 +240,31 @@
 		@media 
 		  (min-resolution: 144dpi) { /* 1x ratio = 96dpi; 96dpi * 1.5 = 144dpi */
 			p.dpi144, p.dpi144 code {
-				color: #2ea2cc;
-			}
-			p.dpi144:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 1.5dppx) {
 			p.dppx144, p.dppx144 code {
-				color: #2ea2cc;
-			}
-			p.dppx144:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 1.5) {
 			p.webkit144, p.webkit144 code {
-				color: #2ea2cc;
-			}
-			p.webkit144:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 1.5) {
 			p.moz144, p.moz144 code {
-				color: #2ea2cc;
-			}
-			p.moz144:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 3/2) {
 			p.opera144, p.opera144 code {
-				color: #2ea2cc;
-			}
-			p.opera144:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 				
@@ -415,46 +274,31 @@
 		@media 
 		  (min-resolution: 120dpi) { /* 1x ratio = 96dpi; 96dpi * 1.25 = 120dpi */
 			p.dpi125, p.dpi125 code {
-				color: #2ea2cc;
-			}
-			p.dpi125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 1.25dppx) {
 			p.dppx125, p.dppx125 code {
-				color: #2ea2cc;
-			}
-			p.dppx125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 1.25) {
 			p.webkit125, p.webkit125 code {
-				color: #2ea2cc;
-			}
-			p.webkit125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 1.25) {
 			p.moz125, p.moz125 code {
-				color: #2ea2cc;
-			}
-			p.moz125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 5/4) {
 			p.opera125, p.opera125 code {
-				color: #2ea2cc;
-			}
-			p.opera125:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		
@@ -463,46 +307,31 @@
 		@media 
 		  (min-resolution: 96dpi) { /* 1x ratio = 96dpi */
 			p.dpi96, p.dpi96 code {
-				color: #2ea2cc;
-			}
-			p.dpi96:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media 
 		  (min-resolution: 1dppx) {
 			p.dppx96, p.dppx96 code {
-				color: #2ea2cc;
-			}
-			p.dppx96:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-webkit-min-device-pixel-ratio: 1) {
 			p.webkit96, p.webkit96 code {
-				color: #2ea2cc;
-			}
-			p.webkit96:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (min--moz-device-pixel-ratio: 1) {
 			p.moz96, p.moz96 code {
-				color: #2ea2cc;
-			}
-			p.moz96:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 		@media
 		  (-o-min-device-pixel-ratio: 1/1) {
 			p.opera96, p.opera96 code {
-				color: #2ea2cc;
-			}
-			p.opera96:before {
-				content: "\f418  ";
+				color: blue;
 			}
 		}
 	}
