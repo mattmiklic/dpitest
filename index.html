@@ -1,0 +1,569 @@
+<html>
+<head>
+	<title>HiDPI Browser Support</title>
+	<div id="updated">Updated <strong>April 14, 2013</strong></div>
+	<style type="text/css">
+		@font-face {
+			font-family: 'Genericons';
+			src: url('font/genericons-regular-webfont.eot');
+			src: url('font/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+				url('font/genericons-regular-webfont.woff') format('woff'),
+				url('font/genericons-regular-webfont.ttf') format('truetype'),
+				url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		.genericon {
+			-webkit-font-smoothing: antialiased;
+			font-size: 40px;
+			line-height: 1;
+			font-family: 'Genericons';
+			text-decoration: inherit;
+			font-weight: normal;
+			font-style: normal;
+			vertical-align: top;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+		
+		hr {
+			border: none;
+			margin-top: 2em;
+			border-bottom:1px solid #ddd;
+		}
+		
+		.genericon.warning {
+			font-size: 22px;
+			line-height: 40px;
+		}
+		
+		/* Styles */
+
+		body {
+			padding: 0 20px 10px;
+			background: #f7f7f7;
+			text-rendering: optimizeLegibility;
+		}
+		a {
+			color: #1e8cbe;
+		}
+		small a {
+			display: none;
+			float: right;
+			font-size: 13px;
+			line-height: 40px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+		section:hover small a {
+			display: inline-block;
+			margin-bottom: -2px;
+		}
+		#updated {
+			float: right;
+			line-height: 4em;
+			font-size: 13px;
+		}
+		body * {
+			font-family: "AvenirNext-Regular", "Helvetica Neue", sans-serif;
+		}
+		table {
+			border: 1px solid #777;
+			border-width: 1px 1px 1px 0;
+			border-spacing: 0;
+			box-shadow: 1px 1px 0 #777;
+			margin: .7em 0 1em;
+			width: 100%;
+		}
+		h1,
+		h2 {
+			font-weight: 300;
+			margin: 1em 0 0.2em;
+		}
+		h2 {
+			margin-top: 1.5em;
+		}
+		table td,
+		table th {
+			border-bottom: 1px solid #ccc;
+			border-left: 1px solid #ccc;
+			padding: 6px 15px;
+			text-align: center;
+			width: 14%;
+		}
+		tr td:first-child,
+		tr th:first-child {
+			border-left: 1px solid #555;
+		}
+		tr:first-child th {
+			text-align: center;
+		}
+		tr:last-child td,
+		tr:last-child th {
+			border-bottom: none;
+		}
+		table th {
+			background-color: #f1f1f1;
+			color: #555;
+			border-left: 1px solid #ccc;
+			font-weight: 600;
+			padding: 6px 15px;
+			text-align: left;
+			font-family: "AvenirNextCondensed-Medium", "Helvetica Neue", sans-serif;
+		}
+		table th small {
+			font-family: "AvenirNextCondensed-Regular", "Helvetica Neue", sans-serif;
+			font-weight: 400;
+		}	
+		table tr {
+			border: 0;
+		}
+		table td {
+			background: #fff;
+		}
+		small {
+			color: #777;
+		}
+		small code {
+			font-size: 0.8em;
+		}
+		.winner {
+			background: #2ea2cc;
+			color: #fff;
+		}
+		tbody tr:first-child td,
+		tbody tr:first-child th {
+			border-top: 1px solid #ccc;
+		}
+		tbody tr:first-child th {
+			text-align: left;
+		}
+		tbody tr:hover {
+			cursor: default;
+		}
+		h6 {
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 11px;
+			font-weight: 600;
+			margin-top: 2em;
+			color: #aaa;
+		}
+		footer h6 {
+			margin: 4em 0 0;
+		}
+		footer cite {
+			font-style: normal;
+		}
+		h6 a {
+			text-decoration: none;
+		}
+		pre {
+			display: block;
+			background: #fff;
+			border: 1px solid #ccc;
+			margin: 1em 0;
+			padding: 10px 16px;
+			white-space: pre-wrap;
+			box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+		}
+		code,
+		code span {
+			font-size: 14px;
+			font-family: Monaco, Consolas, monospace;
+		}
+		pre code,
+		pre code span {
+			background: none;
+		}
+		table sup {
+			font-size: 14px;
+			top: -8px;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+
+<h1 id="top">HiDPI Browser Support</h1>
+
+<p>These are the results of my media query test for determining how to serve high resolution assets to every browser. Here I&rsquo;ve established a pixel ratio of 1.25x so that HiDPI assets are served to any display better than 1x. For more, read <a href="http://wp.me/pHPkU-16J">Making Sense of HiDPI Media Queries</a> on my blog. Or, <a href="test.html">view the test.</a></p>
+
+<p><em>A note on browser support:</em> I&rsquo;ve displayed a checkmark if a browser has complete support for that selector. An alert icon is shown where browser support is buggy or incomplete. For example: Opera 12.15 for OS X understands <code>min-resolution</code> but does not report the correct dpi value for the screen.</p>
+
+<p>Skip to <a href="#ios">iOS</a> &middot; <a href="#android">Android</a> &middot; <a href="#wp">Windows Phone</a> &middot; <a href="#osx">OS X</a> &middot; <a href="#win">Windows</a> &middot; <a href="#syntax">Suggested Syntax</a></p>
+
+<section>
+	<h2 id="ios">iOS <small><a href="#top">Back to Top</a></small></h2>
+	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+			<th>min--moz-device-pixel-ratio: 1.25	</th>
+			<th>o-min-device-pixel-ratio: 5/4	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>Chrome 26<br /><small>iOS 6.1</small><br /></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"><sup>1</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Opera Mini 7<br /><small>iOS 6.1</small></th>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>3</sup></td>
+		</tr>
+		<tr>
+			<th>Safari<br /><small>iOS 6.1</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</tbody>
+	</table>
+	<small><sup>1</sup> Uses iOS WebKit engine, so support will be identical to Safari.</small><br />
+	<small><sup>2</sup> Understands <code>min-resolution</code>, but reports a pixel density of 96dpi on HiDPI displays.</small><br />
+	<small><sup>3</sup> Understands <code>-o-min-device-pixel-ratio</code>, but reports a pixel ratio of 1/1 on HiDPI displays</small>
+</section>
+
+<hr>
+
+<section>
+	<h2 id="android">Android <small><a href="#top">Back to Top</a></small></h2>
+	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+			<th>min--moz-device-pixel-ratio: 1.25	</th>
+			<th>o-min-device-pixel-ratio: 5/4	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr id="browser234">
+			<th>Browser 2.3<br /><small>Android 2.3</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="broswer42">
+			<th>Browser 4.2<br /><small>Android 4.2</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="chromeandroid25">
+			<th>Chrome 26<br /><small>Android 4.2</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="chromebetaandroid">
+			<th>Chrome Beta 27<br /><small>Android 4.2</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="firefoxandroid">
+			<th>Firefox 20<br /><small>Android 2.3, 4.2</small></th>
+			<td class="winner genericon"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="firefoxandroidbeta">
+			<th>Firefox 21 Beta<br /><small>Android 2.3, 4.2</small></th>
+			<td class="winner genericon"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="operaandroid">
+			<th>Opera 12.10<br /><small>Android 2.3, 4.2</small></th>
+			<td class="winner genericon"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon"></td>
+		</tr>
+		<tr id="operamini75">
+			<th>Opera Mini 7.5<br /><small>Android 2.3, 4.2</small></th>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>2</sup></td>
+		</tr>
+		</tbody>
+	</table>
+	<small><sup>1</sup> Understands <code>min--moz-device-pixel-ratio</code> but reports a pixel ratio of 1 on HiDPI displays.</small><br>
+	<small><sup>2</sup> Understands <code>-o-min-device-pixel-ratio</code> but reports a pixel ratio of 1/1 on HiDPI displays.</small>
+</section>
+
+<hr>
+
+<section>
+	<h2 id="wp">Windows Phone <small><a href="#top">Back to Top</a></small></h2>
+	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+			<th>min--moz-device-pixel-ratio: 1.25	</th>
+			<th>o-min-device-pixel-ratio: 5/4	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>Internet Explorer 10<br /><small>Windows Phone 8</small></th>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</tbody>
+	</table>
+</section>
+
+<hr>
+
+<section>
+	<h2 id="osx">OS X <small><a href="#top">Back to Top</a></small></h2>	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+			<th>min--moz-device-pixel-ratio: 1.25	</th>
+			<th>o-min-device-pixel-ratio: 5/4	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr id="chromemac">
+			<th>Chrome 26<br /><small>OS X 10.8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<!--
+		<tr id="chromemac">
+			<th>Chrome Beta<br /><small>OS X 10.8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		-->
+		<tr id="chromemac">
+			<th>Chrome 27 Canary<br /><small>OS X 10.8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="firefoxmac">
+			<th>Firefox 19<br /><small>OS X 10.8</small></th>
+			<td class="winner genericon"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="firefoxmac">
+			<th>Firefox 20 Beta<br /><small>OS X 10.8</small></th>
+			<td class="winner genericon"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="firefoxmac">
+			<th>Firefox 21 Aurora<br /><small>OS X 10.8</small></th>
+			<td class="winner genericon"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="operamac">
+			<th>Opera 12.15<br /><small>OS X 10.8</small></th>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+		</tr>
+		<tr id="safarimac">
+			<th>Safari 6.0.2<br /><small>OS X 10.8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner genericon"></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</tbody>
+	</table>
+	<small><sup>1</sup> Supports min-resolution, but reports a pixel density of 96dpi (1dppx) on HiDPI displays.</small>
+</section>
+
+<hr>
+
+<section>
+	<h2 id="win">Windows <small><a href="#top">Back to Top</a></small></h2>	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+			<th>min--moz-device-pixel-ratio: 1.25	</th>
+			<th>o-min-device-pixel-ratio: 5/4	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>Chrome 26<br /><small>Windows 7, 8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Chrome 27 Beta<br /><small>Windows 7, 8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Chrome 28 Canary<br /><small>Windows 7, 8</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>1</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Firefox 20<br /><small>Windows 7, 8</small></th>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>3</sup></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Firefox 21 Beta<br /><small>Windows 7, 8</small></th>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>3</sup></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Firefox 22 Aurora<br /><small>Windows 7, 8</small></th>
+			<td class="genericon winner"></td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+			<td class="genericon"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Internet Explorer 10 (Desktop)<br /><small>Windows 7, 8</small></th>
+			<td class="winner genericon"><sup>4</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Internet Explorer 10 (Metro)<br /><small>Windows 8, Windows RT</small></th>
+			<td class="winner genericon"><sup>5</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Opera 12.15<br /><small>Windows 7, 8</small></th>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td class="genericon warning"><sup>2</sup></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="genericon warning"><sup>6</sup></td>
+		</tr>
+		</tbody>
+	</table>
+	<small><sup>1</sup> Understands <code>-webkit-min-device-pixel-ratio</code> but reports a pixel ratio of 1 on a HiDPI display.</small><br>
+	<small><sup>2</sup> Understands <code>min-resolution</code> but reports a resolution of 96dpi (1dppx) on a HiDPI display.</small><br>
+	<small><sup>3</sup> Understands <code>min--moz-device-pixel-ratio</code> but reports a pixel ratio of 1 on a HiDPI display.</small><br>
+	<small><sup>4</sup> IE 10 in Desktop mode will report pixel ratios of 1, 1.25, 1.5, or custom sizes depending on the scale factor chosen in the Display control&nbsp;panel.</small><br>
+	<small><sup>5</sup> A pixel ratio of 1.75 is reported when using Metro/&ldquo;Windows 8 style&rdquo; IE 10 and the &ldquo;Make everything on your screen bigger&rdquo; setting enabled (tested on a Retina MacBook Pro running Windows 8).</small><br>
+	<small><sup>6</sup> Understands <code>-o-min-device-pixel-ratio</code> but reports a pixel ratio of 1/1 on a HiDPI display.</small>
+</section>
+
+<hr>
+
+<section>
+	<h2 id="syntax">Suggested Syntax <small><a href="#top">Back to Top</a></small></h2>	
+	
+	<p>We combine the three rules that cover every browser, along with <code>print</code> so that even users without HiDPI displays get high resolution assets when printing.</p>
+	
+	<pre><code>@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+		<span style="color: #999;">/* Styles go here */</span>
+	}</code></pre>
+</section>
+
+<footer>
+	<h6>&mdash;<a href="http://mattnt.com"><cite>Matt Thomas</cite></a> &middot; Icons by <a href="http://genericons.com">Genericons</a>.</h6>
+</footer>
+
+</body>
+</html>
