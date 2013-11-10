@@ -186,13 +186,13 @@
 </head>
 <body>
 
-<div id="updated">Updated <strong>April 14, 2013</strong></div>
+<div id="updated">Updated <strong>November 10, 2013</strong></div>
 
 <h1 id="top">HiDPI Browser Support</h1>
 
 <p>These are the results of my media query test for determining how to serve high resolution assets to every browser. Here I&rsquo;ve established a pixel ratio of 1.25x so that HiDPI assets are served to any display better than 1x. For more, read <a href="http://wp.me/pHPkU-16J">Making Sense of HiDPI Media Queries</a> on my blog. Or, <a href="test.html">view the test.</a></p>
 
-<p><em>A note on browser support:</em> I&rsquo;ve displayed a checkmark if a browser has complete support for that selector. An alert icon is shown where browser support is buggy or incomplete. For example: Opera 12.15 for OS X understands <code>min-resolution</code> but does not report the correct dpi value for the screen.</p>
+<p><em>A note on browser support:</em> I&rsquo;ve displayed a checkmark if a browser has complete support for that selector. An alert icon is shown where browser support is buggy or incomplete. For example: Chrome 31 for Windows understands <code>min-resolution</code> but does not report the correct dpi value for the screen.</p>
 
 <p>Skip to <a href="#ios">iOS</a> &middot; <a href="#android">Android</a> &middot; <a href="#wp">Windows Phone</a> &middot; <a href="#osx">OS X</a> &middot; <a href="#win">Windows</a></p>
 
@@ -202,7 +202,6 @@
 	<p>For each browser with HiDPI support, the most common method that it supports is highlighted in blue. For our media query, we combine the three rules that cover every browser, and add <code>print</code> so that high resolution assets are served when printing pages from your site.</p>
 	
 	<pre><code>@media print,
-	(-o-min-device-pixel-ratio: 5/4),
 	(-webkit-min-device-pixel-ratio: 1.25),
 	(min-resolution: 120dpi) {
 		<span style="color: #999;">/* Styles go here */</span>
@@ -222,40 +221,31 @@
 			<th>min-resolution: 120dpi</th>
 			<th>min-resolution: 1.25dppx	</th>
 			<th>webkit-min-device-pixel-ratio: 1.25	</th>
-			<th>min--moz-device-pixel-ratio: 1.25	</th>
-			<th>o-min-device-pixel-ratio: 5/4	</th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
-			<th>Chrome 26<br /><small>iOS 6.1</small><br /></th>
+			<th>Chrome 30<br /><small>iOS 7</small><br /></th>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td class="winner genericon">&#62488;<sup>1</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<th>Opera Mini 7<br /><small>iOS 6.1</small></th>
+			<th>Opera Mini 7<br /><small>iOS 7</small></th>
 			<td class="genericon warning">&#62484;<sup>2</sup></td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>3</sup></td>
 		</tr>
 		<tr>
-			<th>Safari<br /><small>iOS 6.1</small></th>
+			<th>Safari 7<br /><small>iOS 7</small></th>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 		</tr>
 		</tbody>
 	</table>
 	<p><sup>1</sup> Uses iOS WebKit engine, so support will be identical to Safari.</small><br />
 	<sup>2</sup> Understands <code>min-resolution</code>, but reports a pixel density of 96dpi on HiDPI displays.<br />
-	<sup>3</sup> Understands <code>-o-min-device-pixel-ratio</code>, but reports a pixel ratio of 1/1 on HiDPI displays</p>
 </section>
 
 <hr>
@@ -271,8 +261,6 @@
 			<th>min-resolution: 120dpi</th>
 			<th>min-resolution: 1.25dppx	</th>
 			<th>webkit-min-device-pixel-ratio: 1.25	</th>
-			<th>min--moz-device-pixel-ratio: 1.25	</th>
-			<th>o-min-device-pixel-ratio: 5/4	</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -281,69 +269,39 @@
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 		</tr>
 		<tr id="broswer42">
-			<th>Browser 4.2<br /><small>Android 4.2</small></th>
+			<th>Browser 4.3<br /><small>Android 4.3</small></th>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 		</tr>
 		<tr id="chromeandroid25">
-			<th>Chrome 26<br /><small>Android 4.2</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<th>Chrome 30<br /><small>Android 4.4</small></th>
 			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr id="chromebetaandroid">
-			<th>Chrome Beta 27<br /><small>Android 4.2</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<td class="genericon">&#62488;</td>
+			<td class="genericon">&#62488;</td>
 		</tr>
 		<tr id="firefoxandroid">
-			<th>Firefox 20<br /><small>Android 2.3, 4.2</small></th>
+			<th>Firefox 25<br /><small>Android 4.4</small></th>
 			<td class="winner genericon">&#62488;</td>
 			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>1</sup></td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr id="firefoxandroidbeta">
-			<th>Firefox 21 Beta<br /><small>Android 2.3, 4.2</small></th>
-			<td class="winner genericon">&#62488;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>1</sup></td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr id="operaandroid">
-			<th>Opera 12.10<br /><small>Android 2.3, 4.2</small></th>
+			<th>Opera 16<br /><small>Android 4.4</small></th>
 			<td class="winner genericon">&#62488;</td>
 			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 			<td class="genericon">&#62488;</td>
 		</tr>
 		<tr id="operamini75">
-			<th>Opera Mini 7.5<br /><small>Android 2.3, 4.2</small></th>
+			<th>Opera Mini 7.5<br /><small>Android 4.4</small></th>
 			<td class="winner genericon">&#62488;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
 		</tr>
 		</tbody>
 	</table>
-	<p><sup>1</sup> Understands <code>min--moz-device-pixel-ratio</code> but reports a pixel ratio of 1 on HiDPI displays.<br>
-		<sup>2</sup> Understands <code>-o-min-device-pixel-ratio</code> but reports a pixel ratio of 1/1 on HiDPI displays.</p>
 </section>
 
 <hr>
@@ -359,21 +317,18 @@
 			<th>min-resolution: 120dpi</th>
 			<th>min-resolution: 1.25dppx	</th>
 			<th>webkit-min-device-pixel-ratio: 1.25	</th>
-			<th>min--moz-device-pixel-ratio: 1.25	</th>
-			<th>o-min-device-pixel-ratio: 5/4	</th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
 			<th>Internet Explorer 10<br /><small>Windows Phone 8</small></th>
-			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<td class="genericon warning">&#62484;<sup>1</sup></td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 		</tr>
 		</tbody>
 	</table>
+	<p><sup>1</sup> Understands <code>min-resolution</code> but reports a pixel density of 96dpi on HiDPI displays.</p>
 </section>
 
 <hr>
@@ -386,76 +341,34 @@
 		<tr>
 			<th>&nbsp;</th>
 			<th>min-resolution: 120dpi</th>
-			<th>min-resolution: 1.25dppx	</th>
-			<th>webkit-min-device-pixel-ratio: 1.25	</th>
-			<th>min--moz-device-pixel-ratio: 1.25	</th>
-			<th>o-min-device-pixel-ratio: 5/4	</th>
+			<th>min-resolution: 1.25dppx</th>
+			<th>webkit-min-device-pixel-ratio: 1.25</th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr id="chromemac">
-			<th>Chrome 26<br /><small>OS X 10.8</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<th>Chrome 30<br /><small>OS X 10.9</small></th>
 			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr id="chromemac">
-			<th>Chrome 27 Beta<br /><small>OS X 10.8</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr id="chromemac">
-			<th>Chrome 28 Canary<br /><small>OS X 10.8</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<td class="genericon">&#62488;</td>
+			<td class="genericon">&#62488;</td>
 		</tr>
 		<tr id="firefoxmac">
-			<th>Firefox 20<br /><small>OS X 10.8</small></th>
+			<th>Firefox 25<br /><small>OS X 10.9</small></th>
 			<td class="winner genericon">&#62488;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr id="firefoxmac">
-			<th>Firefox 21 Beta<br /><small>OS X 10.8</small></th>
-			<td class="winner genericon">&#62488;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr id="firefoxmac">
-			<th>Firefox 22 Aurora<br /><small>OS X 10.8</small></th>
-			<td class="winner genericon">&#62488;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
 			<td class="genericon">&#62488;</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr id="operamac">
-			<th>Opera 12.15<br /><small>OS X 10.8</small></th>
-			<td class="genericon warning">&#62484;<sup>1</sup></td>
-			<td class="genericon warning">&#62484;<sup>1</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<th>Opera 17<br /><small>OS X 10.9</small></th>
 			<td class="winner genericon">&#62488;</td>
+			<td class="genericon">&#62488;</td>
+			<td class="genericon">&#62488;</td>
 		</tr>
 		<tr id="safarimac">
-			<th>Safari 6.0.2<br /><small>OS X 10.8</small></th>
+			<th>Safari 7<br /><small>OS X 10.9</small></th>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td class="winner genericon">&#62488;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 		</tr>
 		</tbody>
 	</table>
@@ -474,91 +387,44 @@
 			<th>min-resolution: 120dpi</th>
 			<th>min-resolution: 1.25dppx	</th>
 			<th>webkit-min-device-pixel-ratio: 1.25	</th>
-			<th>min--moz-device-pixel-ratio: 1.25	</th>
-			<th>o-min-device-pixel-ratio: 5/4	</th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
-			<th>Chrome 26<br /><small>Windows 7, 8</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<th>Chrome 31<br /><small>Windows 8.1</small></th>
 			<td class="genericon warning">&#62484;<sup>1</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<th>Chrome 27 Beta<br /><small>Windows 7, 8</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
 			<td class="genericon warning">&#62484;<sup>1</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<td class="genericon warning">&#62484;<sup>2</sup></td>
 		</tr>
 		<tr>
-			<th>Chrome 28 Canary<br /><small>Windows 7, 8</small></th>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>1</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<th>Firefox 20<br /><small>Windows 7, 8</small></th>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>3</sup></td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<th>Firefox 21 Beta<br /><small>Windows 7, 8</small></th>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
-			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>3</sup></td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<th>Firefox 22 Aurora<br /><small>Windows 7, 8</small></th>
-			<td class="genericon winner">&#62488;</td>
-			<td class="genericon">&#62488;</td>
-			<td>&nbsp;</td>
+			<th>Firefox 25<br /><small>Windows 8.1</small></th>
+			<td class="winner genericon">&#62488;</td>
 			<td class="genericon">&#62488;</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<th>Internet Explorer 10 (Desktop)<br /><small>Windows 7, Windows 8, Windows RT</small></th>
-			<td class="winner genericon">&#62488;<sup>4</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<th>Internet Explorer 10 (Metro)<br /><small>Windows 8, Windows RT</small></th>
-			<td class="winner genericon">&#62488;<sup>5</sup></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<th>Internet Explorer 11 (Desktop)<br /><small>Windows 8.1</small></th>
+			<td class="winner genericon">&#62488;<sup>3</sup></td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<th>Opera 12.15<br /><small>Windows 7, 8</small></th>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
-			<td class="genericon warning">&#62484;<sup>2</sup></td>
+			<th>Internet Explorer 11 (Full-screen mode)<br /><small>Windows 8.1</small></th>
+			<td class="winner genericon">&#62488;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
-			<td class="genericon warning">&#62484;<sup>6</sup></td>
+		</tr>
+		<tr>
+			<th>Opera 17<br /><small>Windows 8.1</small></th>
+			<td class="genericon warning">&#62484;<sup>1</sup></td>
+			<td class="genericon warning">&#62484;<sup>1</sup></td>
+			<td class="genericon warning">&#62484;<sup>2</sup></td>
 		</tr>
 		</tbody>
 	</table>
-	<p><sup>1</sup> Understands <code>-webkit-min-device-pixel-ratio</code> but reports a pixel ratio of 1 on a HiDPI display.<br>
-		<sup>2</sup> Understands <code>min-resolution</code> but reports a resolution of 96dpi (1dppx) on a HiDPI display.<br>
-		<sup>3</sup> Understands <code>min--moz-device-pixel-ratio</code> but reports a pixel ratio of 1 on a HiDPI display.<br>
-		<sup>4</sup> IE 10 in Desktop mode will report pixel ratios of 1, 1.25, 1.5, or custom sizes depending on the scale factor chosen in the Display control&nbsp;panel.<br>
-		<sup>5</sup> A pixel ratio of 1.75 is reported when using Metro/&ldquo;Windows 8 style&rdquo; IE 10 and the &ldquo;Make everything on your screen bigger&rdquo; setting enabled (tested on a Retina MacBook Pro running Windows 8).<br>
-		<sup>6</sup> Understands <code>-o-min-device-pixel-ratio</code> but reports a pixel ratio of 1/1 on a HiDPI display.</p>
+	<p><sup>1</sup> Understands <code>min-resolution</code> but reports a resolution of 96dpi (1dppx) on a HiDPI display.<br>
+		<sup>2</sup> Understands <code>-webkit-min-device-pixel-ratio</code> but reports a pixel ratio of 1 on a HiDPI display.<br>
+		<sup>3</sup> IE 11 in Desktop mode will report a pixel ratio based on the Zoom setting chosen.<br>
 </section>
 
 <hr>
