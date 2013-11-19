@@ -46,16 +46,19 @@ a {
 	color: #1e8cbe;
 }
 small a {
-	display: none;
+	display: inline-block;
 	float: right;
 	font-size: 0.8em;
 	line-height: 40px;
 	text-decoration: none;
 	white-space: nowrap;
+	margin-bottom: -2px;
+	opacity: 0;
+	transition: opacity 0.1s ease-in-out;
+	-webkit-transition: opacity 0.1s ease-in-out;
 }
 section:hover small a {
-	display: inline-block;
-	margin-bottom: -2px;
+	opacity: 1;
 }
 #updated {
 	float: right;
