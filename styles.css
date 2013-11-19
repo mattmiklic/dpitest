@@ -62,8 +62,16 @@ section:hover small a {
 	line-height: 4em;
 	font-size: 0.8em;
 }
-body * {
+body {
 	font-family: 'Lato', sans-serif;
+}
+p {
+	color: #333;
+	font-size: 1.05em;
+	line-height: 1.5;
+}
+p code {
+	font-size: 0.9em;
 }
 table {
 	border: 1px solid #777;
