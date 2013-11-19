@@ -2,215 +2,8 @@
 <head>
 	<title>Sensible HiDPI Media Queries</title>
 	<meta name="viewport" content="initial-scale=1.0,width=device-width">
-	<style type="text/css">
-		@font-face {
-		    font-family: 'Genericons';
-		    src: url('font/genericons-regular-webfont.eot');
-		    src: url('font/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('font/genericons-regular-webfont.woff') format('woff'),
-		         url('font/genericons-regular-webfont.ttf') format('truetype'),
-		         url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-		
-		.genericon {
-			-webkit-font-smoothing: antialiased;
-			font-size: 40px;
-			line-height: 50px;
-			padding: 9px 0 6px;
-			font-family: 'Genericons';
-			text-decoration: inherit;
-			font-weight: normal;
-			font-style: normal;
-			vertical-align: top;
-			box-sizing: border-box;
-			-moz-box-sizing: border-box;
-		}
-		
-		hr {
-			border: none;
-			margin-top: 2em;
-			border-bottom:1px solid #ddd;
-		}
-		
-		.genericon.warning {
-			font-size: 22px;
-		}
-		
-		/* Styles */
-
-		body {
-			padding: 0 5% 10px;
-			background: #f7f7f7;
-			text-rendering: optimizeLegibility;
-		}
-		a {
-			color: #1e8cbe;
-		}
-		small a {
-			display: none;
-			float: right;
-			font-size: 13px;
-			line-height: 40px;
-			text-decoration: none;
-			white-space: nowrap;
-		}
-		section:hover small a {
-			display: inline-block;
-			margin-bottom: -2px;
-		}
-		#updated {
-			float: right;
-			line-height: 4em;
-			font-size: 13px;
-		}
-		body * {
-			font-family: "AvenirNext-Regular", "Avenir Next Regular", "Avenir Next", "Helvetica Neue", sans-serif;
-		}
-		table {
-			border: 1px solid #777;
-			border-width: 1px 1px 1px 0;
-			border-spacing: 0;
-			box-shadow: 1px 1px 0 #777;
-			margin: .7em 0 1em;
-			width: 100%;
-		}
-		h1,
-		h2 {
-			font-weight: 400;
-			margin: 1em 0 0.2em;
-			line-height: 1.2;
-		}
-		h2 {
-			margin-top: 1.5em;
-		}
-		table td,
-		table th {
-			border-bottom: 1px solid #ccc;
-			border-left: 1px solid #ccc;
-			padding: 6px 15px;
-			text-align: center;
-			width: 14%;
-		}
-		tr td:first-child,
-		tr th:first-child {
-			border-left: 1px solid #555;
-		}
-		tr:first-child th {
-			text-align: center;
-		}
-		tr:last-child td,
-		tr:last-child th {
-			border-bottom: none;
-		}
-		table th {
-			background-color: #f1f1f1;
-			color: #555;
-			border-left: 1px solid #ccc;
-			font-weight: 600;
-			padding: 6px 15px;
-			text-align: left;
-			font-family: "AvenirNextCondensed-Medium", "Avenir Next Condensed Medium", "Avenir Next Condensed", "Helvetica Neue", sans-serif;
-		}
-		table th small {
-			font-family: "AvenirNextCondensed-Regular", "Avenir Next Condensed Regular", "Avenir Next Condensed", "Helvetica Neue", sans-serif;
-			font-weight: 400;
-		}	
-		table tr {
-			border: 0;
-		}
-		table td {
-			background: #fff;
-		}
-		small {
-			color: #777;
-		}
-		small code {
-			font-size: 0.8em;
-		}
-		.winner {
-			background: #2ea2cc;
-			color: #fff;
-		}
-		tbody tr:first-child td,
-		tbody tr:first-child th {
-			border-top: 1px solid #ccc;
-		}
-		tbody tr:first-child th {
-			text-align: left;
-		}
-		tbody tr:hover {
-			cursor: default;
-		}
-		h6 {
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-size: 11px;
-			font-weight: 600;
-			margin-top: 2em;
-			color: #aaa;
-		}
-		footer h6 {
-			margin: 4em 0 0;
-		}
-		footer cite {
-			font-style: normal;
-		}
-		h6 a {
-			text-decoration: none;
-		}
-		pre {
-			display: block;
-			background: #fff;
-			border: 1px solid #ccc;
-			margin: 1em 0;
-			padding: 10px 16px;
-			white-space: pre-wrap;
-			box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
-		}
-		code,
-		code span {
-			font-size: 14px;
-			font-family: Monaco, Consolas, monospace;
-		}
-		pre code,
-		pre code span {
-			background: none;
-		}
-		table sup {
-			font-size: 14px;
-			top: -8px;
-			position: relative;
-		}
-		p.note,
-		p.note * {
-			font-size: 12px;
-		}
-		@media screen and (max-width: 600px) {
-			h1#top {
-				margin-top: 0;
-			}
-			#updated {
-				float: none;
-				line-height: 4em;
-				font-size: 13px;
-			}
-			pre code,
-			pre code span {
-				font-size: 12px;
-			}
-			th {
-				font-size: 11px;
-				padding: 3% !important;
-			}
-		}
-		@media screen and (max-width: 400px) {
-			body {
-				padding: 0 1.5% 10px;
-			}
-		}
-	</style>
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+	<link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -229,11 +22,11 @@
 	
 	<p>For each browser with HiDPI support, the most common method that it supports is highlighted in blue. For our media query, we combine the two rules that cover every browser, and add <code>print</code> so that high resolution assets are served when printing pages from your site.</p>
 	
-	<pre><code>@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 120dpi) {
-      <span style="color: #999;">/* Styles go here */</span>
-  }</code></pre>
+	<pre><code>@media <span class="query">print</span>,
+	<span class="query">(-webkit-min-device-pixel-ratio: 1.25)</span>,
+	<span class="query">(min-resolution: 120dpi)</span> {
+		<span class="placeholder">/* Styles go here */</span>
+	}</code></pre>
 </section>
 
 <hr>
@@ -457,7 +250,7 @@
 <hr>
 
 <footer>
-	<h6>&mdash;<a href="http://mattnt.com"><cite>Matt Thomas</cite></a> &middot; Icons by <a href="http://genericons.com">Genericons</a>.</h6>
+	<h6>&mdash;<a href="http://mattnt.com"><cite>Matt Thomas</cite></a> &middot; Icons by <a href="http://genericons.com">Genericons</a> &middot; <a href="http://www.google.com/fonts/specimen/Lato">Lato</a> via Google Fonts.</h6>
 </footer>
 
 </body>
