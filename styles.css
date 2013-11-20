@@ -164,6 +164,7 @@ h6 a {
 	text-decoration: none;
 }
 pre {
+	color: #777;
 	display: block;
 	background: #fff;
 	border: 1px solid #ccc;
@@ -176,11 +177,8 @@ code,
 code span {
 	font-family: Monaco, Consolas, monospace;
 }
-pre .placeholder {
-	color: #999;
-}
 pre .query {
-	color: blue;
+	color: #4cb420;
 }
 pre code,
 pre code span {
