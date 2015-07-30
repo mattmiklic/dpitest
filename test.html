@@ -2,13 +2,13 @@
 <head>
 	<title>HiDPI Test</title>
 	<meta name="viewport" content="initial-scale=1.0,width=device-width">
-	<style type="text/css">			
+	<style type="text/css">
 		body * {
-			font-family: "AvenirNext-Regular", "Avenir Next Regular", "Avenir Next", "Helvetica Neue", sans-serif;
+			font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", Noto, sans-serif;
 			color: #999;
 		}
 		h1, h2 {
-			font-family: "AvenirNext-Medium", "Avenir Next Medium", "Avenir Next", "Helvetica Neue", sans-serif;
+			font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", Noto, sans-serif;
 			font-weight: 600;
 			margin: 5% auto 0;
 			width: 85%;
@@ -31,6 +31,25 @@
 		}
 
 		@media 
+		  (min-resolution: 384dpi) { /* 1x ratio = 96dpi; 96dpi * 3 = 288dpi */
+			p.dpi384, p.dpi384 code {
+				color: blue;
+			}
+		}
+		@media 
+		  (min-resolution: 4dppx) {
+			p.dppx4, p.dppx4 code {
+				color: blue;
+			}
+		}
+		@media
+		  (-webkit-min-device-pixel-ratio: 4) {
+			p.webkit4, p.webkit4 code {
+				color: blue;
+			}
+		}
+		
+		@media 
 		  (min-resolution: 288dpi) { /* 1x ratio = 96dpi; 96dpi * 3 = 288dpi */
 			p.dpi288, p.dpi288 code {
 				color: blue;
@@ -45,18 +64,6 @@
 		@media
 		  (-webkit-min-device-pixel-ratio: 3) {
 			p.webkit288, p.webkit288 code {
-				color: blue;
-			}
-		}
-		@media
-		  (min--moz-device-pixel-ratio: 3) {
-			p.moz288, p.moz288 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 3/1) {
-			p.opera288, p.opera288 code {
 				color: blue;
 			}
 		}
@@ -95,41 +102,6 @@
 			}
 		}
 		
-		
-		
-		
-		
-		@media 
-		  (min-resolution: 216dpi) { /* 1x ratio = 96dpi; 96dpi * 2.25 = 216dpi */
-			p.dpi216, p.dpi216 code {
-				color: blue;
-			}
-		}
-		@media 
-		  (min-resolution: 2.25dppx) {
-			p.dppx216, p.dppx216 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-webkit-min-device-pixel-ratio: 2.25) {
-			p.webkit216, p.webkit216 code {
-				color: blue;
-			}
-		}
-		@media
-		  (min--moz-device-pixel-ratio: 2.25) {
-			p.moz216, p.moz216 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 9/4) {
-			p.opera216, p.opera216 code {
-				color: blue;
-			}
-		}
-		
 								
 		
 		
@@ -149,18 +121,6 @@
 		@media
 		  (-webkit-min-device-pixel-ratio: 2) {
 			p.webkit192, p.webkit192 code {
-				color: blue;
-			}
-		}
-		@media
-		  (min--moz-device-pixel-ratio: 2) {
-			p.moz192, p.moz192 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 2/1) {
-			p.opera192, p.opera192 code {
 				color: blue;
 			}
 		}
@@ -186,18 +146,6 @@
 				color: blue;
 			}
 		}
-		@media
-		  (min--moz-device-pixel-ratio: 1.25) {
-			p.moz125, p.moz125 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 5/4) {
-			p.opera125, p.opera125 code {
-				color: blue;
-			}
-		}
 		
 		
 		
@@ -217,18 +165,6 @@
 		@media
 		  (-webkit-min-device-pixel-ratio: 1.75) {
 			p.webkit168, p.webkit168 code {
-				color: blue;
-			}
-		}
-		@media
-		  (min--moz-device-pixel-ratio: 1.75) {
-			p.moz168, p.moz168 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 7/4) {
-			p.opera168, p.opera168 code {
 				color: blue;
 			}
 		}
@@ -255,18 +191,6 @@
 				color: blue;
 			}
 		}
-		@media
-		  (min--moz-device-pixel-ratio: 1.5) {
-			p.moz144, p.moz144 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 3/2) {
-			p.opera144, p.opera144 code {
-				color: blue;
-			}
-		}
 				
 
 
@@ -289,18 +213,6 @@
 				color: blue;
 			}
 		}
-		@media
-		  (min--moz-device-pixel-ratio: 1.25) {
-			p.moz125, p.moz125 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 5/4) {
-			p.opera125, p.opera125 code {
-				color: blue;
-			}
-		}
 		
 		
 		
@@ -320,18 +232,7 @@
 		  (-webkit-min-device-pixel-ratio: 1) {
 			p.webkit96, p.webkit96 code {
 				color: blue;
-			}
-		}
-		@media
-		  (min--moz-device-pixel-ratio: 1) {
-			p.moz96, p.moz96 code {
-				color: blue;
-			}
-		}
-		@media
-		  (-o-min-device-pixel-ratio: 1/1) {
-			p.opera96, p.opera96 code {
-				color: blue;
+
 			}
 		}
 	}
@@ -339,6 +240,32 @@
 </head>
 <body>
 	<p class="intro">The following paragraphs use different media queries for serving HiDPI styles. By default all text is gray, and the media queries change it to blue. If all text is gray, your browser does not support these media queries. <a href="index.html">View the results</a></p>
+
+	<h2>4x</h2>
+
+	<p class="dpi384">This paragraph uses <code>(min-resolution: 384dpi)</code> to specify HiDPI styles.</p>
+
+	<p class="dppx4">This paragraph uses <code>(min-resolution: 4dppx)</code> to specify HiDPI styles.</p>
+	
+	<p class="webkit4">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 4)</code> to specify HiDPI styles.</p>
+
+
+	<h2>3x</h2>
+
+	<p class="dpi288">This paragraph uses <code>(min-resolution: 288dpi)</code> to specify HiDPI styles.</p>
+
+	<p class="dppx288">This paragraph uses <code>(min-resolution: 3dppx)</code> to specify HiDPI styles.</p>
+	
+	<p class="webkit288">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 3)</code> to specify HiDPI styles.</p>
+
+	<h2>2.5x</h2>
+
+	<p class="dpi240">This paragraph uses <code>(min-resolution: 240dpi)</code> to specify HiDPI styles.</p>
+
+	<p class="dppx240">This paragraph uses <code>(min-resolution: 2.5dppx)</code> to specify HiDPI styles.</p>
+	
+	<p class="webkit240">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 2.5)</code> to specify HiDPI styles.</p>
+
 	<h2>2x</h2>
 
 	<p class="dpi192">This paragraph uses <code>(min-resolution: 192dpi)</code> to specify HiDPI styles.</p>
@@ -346,10 +273,6 @@
 	<p class="dppx192">This paragraph uses <code>(min-resolution: 2dppx)</code> to specify HiDPI styles.</p>
 	
 	<p class="webkit192">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 2)</code> to specify HiDPI styles.</p>
-
-	<p class="moz192">This paragraph uses <code>(min--moz-device-pixel-ratio: 2)</code> to specify HiDPI styles.</p>
-
-	<p class="opera192">This paragraph uses <code>(-o-min-device-pixel-ratio: 2/1)</code> to specify HiDPI styles.</p>
 
 	<h2>1.75x</h2>
 
@@ -359,10 +282,6 @@
 	
 	<p class="webkit168">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 1.75)</code> to specify HiDPI styles.</p>
 
-	<p class="moz168">This paragraph uses <code>(min--moz-device-pixel-ratio: 1.75)</code> to specify HiDPI styles.</p>
-
-	<p class="opera168">This paragraph uses <code>(-o-min-device-pixel-ratio: 7/4)</code> to specify HiDPI styles.</p>
-
 	<h2>1.5x</h2>
 
 	<p class="dpi144">This paragraph uses <code>(min-resolution: 144dpi)</code> to specify HiDPI styles.</p>
@@ -371,10 +290,6 @@
 	
 	<p class="webkit144">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 1.5)</code> to specify HiDPI styles.</p>
 
-	<p class="moz144">This paragraph uses <code>(min--moz-device-pixel-ratio: 1.5)</code> to specify HiDPI styles.</p>
-
-	<p class="opera144">This paragraph uses <code>(-o-min-device-pixel-ratio: 3/2)</code> to specify HiDPI styles.</p>
-		
 	<h2>1.25x</h2>
 
 	<p class="dpi125">This paragraph uses <code>(min-resolution: 120dpi)</code> to specify HiDPI styles.</p>
@@ -383,10 +298,6 @@
 	
 	<p class="webkit125">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 1.25)</code> to specify HiDPI styles.</p>
 
-	<p class="moz125">This paragraph uses <code>(min--moz-device-pixel-ratio: 1.25)</code> to specify HiDPI styles.</p>
-
-	<p class="opera125">This paragraph uses <code>(-o-min-device-pixel-ratio: 5/4)</code> to specify HiDPI styles.</p>
-
 	<h2>1x</h2>
 
 	<p class="dpi96">This paragraph uses <code>(min-resolution: 96dpi)</code> to specify HiDPI styles.</p>
@@ -394,11 +305,6 @@
 	<p class="dppx96">This paragraph uses <code>(min-resolution: 1dppx)</code> to specify HiDPI styles.</p>
 	
 	<p class="webkit96">This paragraph uses <code>(-webkit-min-device-pixel-ratio: 1)</code> to specify HiDPI styles.</p>
-
-	<p class="moz96">This paragraph uses <code>(min--moz-device-pixel-ratio: 1)</code> to specify HiDPI styles.</p>
-
-	<p class="opera96">This paragraph uses <code>(-o-min-device-pixel-ratio: 1/1)</code> to specify HiDPI styles.</p>
-	
 
 </body>
 </html>
