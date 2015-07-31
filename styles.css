@@ -4,10 +4,6 @@ hr {
 	border-bottom:1px solid #ddd;
 }
 
-.genericon.warning {
-	font-size: 22px;
-}
-
 /* Styles */
 
 body {
@@ -106,10 +102,6 @@ small {
 }
 small code {
 	font-size: 0.8em;
-}
-.winner {
-	background: #2ea2cc;
-	color: #fff;
 }
 tbody tr:first-child td,
 tbody tr:first-child th {
