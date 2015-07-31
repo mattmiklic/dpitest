@@ -142,7 +142,7 @@ pre {
 }
 code,
 code span {
-	font-family: Monaco, Consolas, monospace;
+	font-family: Menlo, Consolas, monospace;
 }
 pre .query {
 	color: #4ab866;
