@@ -1,9 +1,3 @@
-hr {
-	border: none;
-	margin-top: 2em;
-	border-bottom:1px solid #ddd;
-}
-
 /* Styles */
 
 body {
@@ -14,7 +8,7 @@ body {
 	margin: 0 auto;
 }
 a {
-	color: #1e8cbe;
+	color: #00aadc;
 }
 small a {
 	display: inline-block;
@@ -72,6 +66,9 @@ table th {
 	text-align: center;
 	width: 14%;
 }
+table th small {
+	font-weight: 400;
+}
 tr td:first-child,
 tr th:first-child {
 	border-left: 1px solid #555;
@@ -85,7 +82,7 @@ tr:last-child th {
 }
 table th {
 	background-color: #f1f1f1;
-	color: #555;
+	color: #333;
 	border-left: 1px solid #ccc;
 	font-weight: 600;
 	padding: 6px 15px;
@@ -112,6 +109,9 @@ tbody tr:first-child th {
 }
 tbody tr:hover {
 	cursor: default;
+}
+thead th {
+	font-size: 0.75em;
 }
 h6 {
 	text-transform: uppercase;
@@ -145,7 +145,7 @@ code span {
 	font-family: Monaco, Consolas, monospace;
 }
 pre .query {
-	color: #4cb420;
+	color: #4ab866;
 }
 pre code,
 pre code span {
